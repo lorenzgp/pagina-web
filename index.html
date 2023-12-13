@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- librerias utilizadas -->
+  <script src="https://kit.fontawesome.com/78ced824c0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="responsiveslides.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="fancybox/jquery.fancybox.js"></script>
+  <script src="modal.js"></script>
+  <script src="jquery.tinycarousel.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Oswald&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <!-- librerias utilizadas -->
+  <link rel="stylesheet" href="escritorio.css">
+  <link rel="stylesheet" href="movil.css">
+  <link rel="stylesheet" href="modal.css">
+  <title>Proyecto</title>
+</head>
+<body class="smooth-scrolling">
+  
+  <!-- codigo organizacion de header -->
+  <header class="ancho">
+    <div class="promentor">
+      <span>ProMentor</span><p>.</p>
+    </div>
+    <div class="ctn_icons_header">
+      <div class="iconos_us">
+        <a href="#"><i class="fa-solid fa-envelope-open-text"></i></a>
+        <div class="ctn_texto_iconos">
+          <p>Email us</p>
+          <span>example@demo.com</span>
+        </div>
+      </div>
+      <div class="iconos_us">
+        <a href=""><i class="fa-solid fa-phone-volume"></i></a>
+        <div class="ctn_texto_iconos">
+          <p>Call us</p>
+          <span>123(69464949)</span>
+        </div>
+      </div>
+      <div class="iconos_us1">
+        <a href=""><i class="fa-solid fa-map-location-dot"></i></a>
+        <div class="ctn_texto_iconos">
+          <p>Meet Us</p>
+          <span>29 fella street miami, usa</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- codigo organizacion de header -->
+
+  <!-- contenedor_menu -->
+  <section class="contenedor_menu ancho">
+    <div class="boton_sandwich">
+      <a href="#" id="iconomenu"><i class="fa-solid fa-bars"></i></a>
+    </div>
+    <nav class="wow animate__animated animate__backInDown menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#seccion1">About Us</a></li>
+        <li><a href="#seccion2">Services</a></li>
+        <li><a href="#seccion3">Blog</a></li>
+        <li><a href="#seccion4">Pages</a></li>
+        <li><a href="#seccion5">Galery</a></li>
+        <li><a href="#" id="openModal">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="wow animate__animated animate__backInDown promentor1">
+      <span>ProMentor</span><p>.</p>
+    </div>
+    <div
+    class="wow animate__animated animate__backInDown contenedor_btn_request">
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="#" id="request">Request A Quote</a>
+    </div>
+  </section>
+  <nav class="menu" id="cajamenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#">Galery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!--   modal -->
+<div class="caja_modal" id="caja_modal">
+  <div class="caja_modal_contenido">
+    <div class="modal_cabecera">
+      <h2>CONTACTANOS</h2>
+      <button class="btnCerrarModal" id="btnCerrarModal"><i class="fa-solid fa-circle-xmark"></i></button>
+    </div>
+    <div class="modal_cuerpo">
+      <div class="form-container">
+        <form id="myForm" class="my-form">
+          <div class="form-control">
+            <label for="txt-username">Username</label>
+            <input
+              type="text"
+              id="txt-username"
+              placeholder="Enter Username"
+            />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <label for="txt-email">Email</label>
+            <input type="text" id="txt-email" placeholder="Enter email" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <label for="txt-password">Password</label>
+            <input
+              type="password"
+              id="txt-password"
+              placeholder="Enter password"
+            />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <label for="txt-password2">Confirm Password</label>
+            <input
+              type="password"
+              id="txt-password2"
+              placeholder="Enter password again"
+            />
+            <small>Error Message</small>
+          </div>
+          <button class="btn-submit" id="btnSumbit">Submit</button>
+        </form>
+          </div>
+    </div>
+  </div>
+</div>
+<!-- modal -->
+
+
+
+  <!-- slide de fotos -->
+  <section class="contenedor_slide">
+    <ul class="rslides">
+      <li><img src="imagenes/Slide1.jpg" alt=""></li>
+      <li><img src="imagenes/Slide2.jpg" alt=""></li>
+      <li><img src="imagenes/Slide3.jpg" alt=""></li>
+    </ul>
+    <div class="texto_slide">
+      <span class="wow animate__animated animate__slideInLeft">Vision to</span>
+      <span class="wow animate__animated animate__slideInRight">Grow Better</span>
+      <a  href="">Discover more about us</a>
+    </div>
+  </section>
+  <!-- slide de fotos -->
+
+  <!-- contenedor de estadisticas y making -->
+  <section class="stadics">
+    <article class="projects">
+      <div class="wow animate__animated animate__fadeInUp ctn_250">
+        <span>250+</span>
+        <p>PROJECTS FINISHED</p>
+      </div>
+      <div class="wow animate__animated animate__fadeInUp ctn_50">
+        <span>50+</span>
+        <p>AWARDS WON</p>
+      </div>
+      <div class="wow animate__animated animate__fadeInUp ctn_45">
+        <span>45+</span>
+        <p>YEARS OF EXPERIENCE</p>
+      </div>
+      <div class="wow animate__animated animate__fadeInUp ctn_100">
+        <span>100%</span>
+        <p>SATIFIDE CLIENTS</p>
+      </div>
+    </article>
+    <article class="making">
+      <div class="making_texto">
+        <span class="wow animate__animated animate__slideInLeft">Making the right decision at the right time</span>
+        <p class="wow animate__animated animate__slideInRight">NUMBER ONE CONSULTING AGENCY</p>
+      </div>
+    </article>
+  </section>
+  <!-- contenedor de estadisticas y making -->
+
+  <!-- contenedor de barra de numeros -->
+  <section class="ctn_numbers ancho">
+    <article class="wow wow animate__animated animate__fadeInDown">
+      <div class="titulo_number">
+        <div class="number">
+          <span>01</span>
+        </div>
+        <div class="titulo">
+          <span>Customer<br>Strategy</span>
+        </div>
+      </div>
+      <div class="parrafo">
+        <p>Established fact that a reader will be distracted by the readable content page when looking at its layout around.</p>
+      </div>
+    </article>
+    <article class="wow wow animate__animated animate__fadeInDown">
+      <div class="titulo_number">
+        <div class="number">
+          <span>02</span>
+        </div>
+        <div class="titulo">
+          <span>Advaced<br>Analytic</span>
+        </div>
+      </div>
+      <div class="parrafo">
+        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which.</p>
+      </div>
+    </article>
+    <article class="wow wow animate__animated animate__fadeInDown">
+      <div class="titulo_number">
+        <div class="number">
+          <span>03</span>
+        </div>
+        <div class="titulo">
+          <span>Financial<br>Consult</span>
+        </div>
+      </div>
+      <div class="parrafo">
+        <p>Enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created.</p>
+      </div>
+    </article>
+    <article class="wow wow animate__animated animate__fadeInDown">
+      <div class="titulo_number">
+        <div class="number">
+          <span>04</span>
+        </div>
+        <div class="titulo">
+          <span>Market<br>Research</span>
+        </div>
+      </div>
+      <div class="parrafo">
+        <p>Absorbed in the exquisite sense mere tranquil existence, that I neglect my talents. I should be incapable.</p>
+      </div>
+    </article>
+  </section>
+  <!-- contenedor de barra de numeros -->
+
+  <!-- barras de titulo -->
+  <div id="seccion1" class="wow animate__animated animate__slideInLeft barratitulo ancho">
+    <span>ABOUT</span>
+  </div>
+  <!-- barras de titulo -->
+
+  <section class="wow animate__animated animate__slideInRight apower ancho">
+    <span>A power that of the CEO company.</span>
+  </section>
+
+  <section class="ctn_ceo ancho">
+    <picture>
+      <img src="imagenes/image_ceo.jpg" alt="">
+    </picture>
+    <article>
+      <div class="wow animate__animated animate__slideInLeft ctn_nombre_ceo">
+        <span>Michael Dunessz</span>
+      </div>
+      <div class="ctn_texto_ceo">
+        <p class="wow animate__animated animate__slideInRight">Designed by Men, an initiative of the Stewart Program for Modern Design in collaboration with the Montreal Museum of Fine Arts, will bring greater visibility to the contributions of a diverse group of people designers from around the world focusing on the intersecting spheres of process, making and industrial production.</p>
+      </div><br>
+      <div class="ctn_boton_ceo">
+        <a href="">Discover more about us</a>
+      </div>
+    </article>
+  </section>
+  <br>
+
+  <section class="wow animate__animated animate__slideInRight apower ancho">
+    <span>The Members of the Team.</span>
+  </section>
+
+  <section class="wow wow animate__animated animate__fadeInUp empresa ancho">
+    <article class="Martha">
+      <div>
+        <span class="Name">Georgio</span>
+        <span>Software Developer</span>
+      </div>
+      <div class="texto_position">
+        <p>Georgio</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+    </article>
+    <article class="Fernanda">
+      <div>
+        <span class="Name">Robert</span>
+        <span>Associant Manager</span>
+      </div>
+      <div class="texto_position">
+        <p>Robert</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+    </article>
+    <article class="Susana">
+      <div>
+        <span class="Name">Kalel</span>
+        <span>Senior Developer</span>
+      </div>
+      <div class="texto_position">
+        <p>Kalel</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+    </article>
+    <article class="JuanPablo">
+      <div>
+        <span class="Name">Martha</span>
+        <span>Project Excutive</span>
+      </div>
+      <div class="texto_position">
+        <p>Martha</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+    </article>
+  </section>
+  <br><br><br>
+
+   <!-- barras de titulo -->
+   <div id="seccion2" class="wow animate__animated animate__slideInLeft barratitulo ancho">
+    <span>SERVICES</span>
+  </div>
+  <!-- barras de titulo -->
+
+
+
+  <!-- carrusel -->
+  <section class="contenedor-principal carrusel-contenedor ancho">
+    <div class="slider1">
+        <div class="wow animate__animated animate__slideInLeft columna-izquierda">
+            <h1>OUR SERVICES</h1>
+            <i class="fa-solid fa-square-arrow-right"></i>
+            <h4>SERVICES OF QUALITY</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, molestias!<p>
+            <div class="contenedor-botones">
+                <a class="buttons prev" href=""><i class="fa-sharp fa-solid fa-arrow-left"></i></i></a>
+                <a class="buttons next" href=""><i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="viewport">
+            <ul class="overview">
+                <li class="wow animate__animated animate__fadeInUp servicio-nombre-ocupacion">
+                    <img src="imagenes/Carrusel1.jpg" alt="">
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, alias.<p>           
+                </li>
+                <li class="wow animate__animated animate__fadeInUp    servicio-nombre-ocupacion">
+                    <img src="imagenes/Carrusel2.jpg" alt="">
+                    <h3>Develope</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, facilis.<p>
+                </li>
+                <li class="wow animate__animated animate__fadeInUp  servicio-nombre-ocupacion">
+                    <img src="imagenes/Carrusel3.jpg" alt="">
+                    <h3>Organization</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, maiores.<p>
+                </li>
+                <li class="wow animate__animated animate__fadeInUp  servicio-nombre-ocupacion">
+                    <img src="imagenes/Carrusel4.jpg" alt="">
+                    <h3>Meeting</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, corrupti?<p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<br><br>
+  <!-- carrusel -->
+
+    <!-- barras de titulo -->
+    <div id="seccion3" class="wow animate__animated animate__slideInLeft barratitulo ancho">
+      <span>BLOG</span>
+    </div>
+    <!-- barras de titulo -->
+
+
+    <!-- contenedor de noticias -->
+    <br>
+    <section class="contenedor_position ancho">
+      <div class="wow animate__animated animate__fadeInUp card">
+        <div class="contenedor1">
+          <div class="circle_naranja">
+            <span class="mar">jun</span> <span class="num19">07</span>
+          </div>
+          <div class="textoblanco">SALUD</div>
+        </div>
+        <article class="texto">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, nihil.
+          </p>
+        </article>
+        <div class="button">
+          <a href="">Leer Más <span>
+            <i class="fa-solid fa-angles-right"></i></span></a>
+        </div>
+      </div>
+      <div class="card wow animate__animated animate__fadeInUp">
+        <div class="contenedor2">
+          <div class="circle_naranja">
+            <span class="mar">jun</span> <span class="num19">07</span>
+          </div>
+          <div class="textoblanco">ACTIVIDADES</div>
+        </div>
+        <article class="texto">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, nihil.</p>
+        </article>
+        <div class="button">
+          <a href="">Leer Más <span>
+            <i class="fa-solid fa-angles-right"></i></span></a>
+        </div>
+      </div>
+      <div class="card wow animate__animated animate__fadeInUp">
+        <div class="contenedor3">
+          <div class="circle_naranja">
+            <span class="mar">jun</span> <span class="num19">07</span>
+          </div>
+          <div class="textoblanco">PREESCOLAR</div>
+        </div>
+        <article class="texto">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, nihil.</p>
+        </article>
+        <div class="button">
+          <a href="">Leer Más <span>
+            <i class="fa-solid fa-angles-right"></i></span></a>
+        </div>
+      </div>
+    </section>
+    <br><br>
+    <!-- contenedor de noticias -->
+
+    <!-- contenedor parallax -->
+    <section class="parallax">
+      <div class="parallaxfondo"></div>
+        <div class="info_parallax">
+          <div class="wow animate__animated animate__fadeInRight texto_welcome">
+            <span id="Welcome">Good thoughts. Good deeds. Broad visions</span>
+            <p id="Lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident magni fugiat ea aspernatur dicta modi iste, odio maxime accusamus, ab impedit placeat debitis nam aperiam facilis voluptate, ipsum exercitationem minus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contenedor parallax -->
+    <br><br>
+
+    <!-- barras de titulo -->
+    <div id="seccion4" class="wow animate__animated animate__slideInLeft barratitulo ancho">
+      <span>PAGES</span>
+    </div>
+    <!-- barras de titulo -->
+
+    <!-- contenedor acordeon -->
+    <div class="acordeon ancho">
+      <div class="acordeon_titulo titulo1">
+        <h2>Check what our clients say</h2>
+        <div class="iconos">
+          <i class="fa-solid fa-plus mas1"></i>
+          <i class="fa-solid fa-minus menos1"></i>
+        </div>
+      </div>
+      <p class="acordeon_contenido contenido1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, ex,
+        eligendi. Iste, beatae error magni a sequi sit voluptatum obcaecati
+        recusandae, nisi ipsa laboriosam vero cupiditate vel molestiae
+        reiciendis itaque.
+      </p>
+    </div>
+    <div class="acordeon ancho">
+      <div class="acordeon_titulo titulo2">
+        <h2>Our must read consulting posts</h2>
+        <div class="iconos">
+          <i class="fa-solid fa-plus mas2"></i>
+          <i class="fa-solid fa-minus menos2"></i>
+        </div>
+      </div>
+      <p class="acordeon_contenido contenido2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, ex,
+        eligendi. Iste, beatae error magni a sequi sit voluptatum obcaecati
+        recusandae, nisi ipsa laboriosam vero cupiditate vel molestiae
+        reiciendis itaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ipsa quisquam accusamus porro
+        quos, ipsam, enim eius ex hic harum eligendi, inventore ducimus aspernatur repellendus eveniet sequi sint autem
+        iste.
+      </p>
+    </div>
+    <div class="acordeon ancho">
+      <div class="acordeon_titulo titulo3">
+        <h2>Meet our dicated team members</h2>
+        <div class="iconos">
+          <i class="fa-solid fa-plus mas3"></i>
+          <i class="fa-solid fa-minus menos3"></i>
+        </div>
+      </div>
+      <p class="acordeon_contenido contenido3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, ex,
+        eligendi. Iste, beatae error magni a sequi sit voluptatum obcaecati
+        recusandae, nisi ipsa laboriosam vero cupiditate vel molestiae
+        reiciendis itaque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ipsa quisquam accusamus porro
+        quos, ipsam, enim eius ex hic harum eligendi, inventore ducimus aspernatur repellendus eveniet sequi sint autem
+        iste.
+      </p>
+    </div>    
+    <br><br>
+    <!-- contenedor acordeon -->
+
+    <div id="seccion5" class="wow animate__animated animate__slideInLeft barratitulo ancho">
+      <span>GALERY</span>
+    </div>
+    <!-- barras de titulo -->
+
+    <!-- contenedor fancybox -->
+    <br>
+    <section class="contenedor_fancy ancho">
+      <figure>
+      <a href="imagenes/fancybox1.jpg" class="fancybox" rel="gallery1" title="foto1"><img src="imagenes/fancybox1.jpg" alt=""></a>
+      </figure>
+      <figure>
+        <a href="imagenes/fancybox2.jpg" class="fancybox" rel="gallery1" title="foto2"><img src="imagenes/fancybox2.jpg" alt=""></a>
+      </figure>
+     <figure>
+      <a href="imagenes/fancybox3.jpg" class="fancybox" rel="gallery1" title="foto3"><img src="imagenes/fancybox3.jpg" alt=""></a>
+     </figure>
+    <figure>
+      <a href="imagenes/fancybox4.jpg" class="fancybox" rel="gallery1" title="foto4"><img src="imagenes/fancybox4.jpg" alt=""></a>
+    </figure>
+    <figure>
+      <a href="imagenes/fancybox5.jpg" class="fancybox" rel="gallery1" title="foto4"><img src="imagenes/fancybox5.jpg" alt=""></a>
+    </figure>
+     <figure>
+      <a href="imagenes/fancybox6.jpg" class="fancybox" rel="gallery1" title="foto4"><img src="imagenes/fancybox6.jpg" alt=""></a>
+     </figure>
+     <figure>
+      <a href="imagenes/fancybox7.jpg" class="fancybox" rel="gallery1" title="foto4"><img src="imagenes/fancybox7.jpg" alt=""></a>
+     </figure>
+     <figure>
+      <a href="imagenes/fancybox8.jpg" class="fancybox" rel="gallery1" title="foto4"><img src="imagenes/fancybox8.jpg" alt=""></a>
+     </figure>
+     <figure>
+      <a href="imagenes/fancybox9.jpg" class="fancybox" rel="gallery1" title="foto4"><img src="imagenes/fancybox9.jpg" alt=""></a>
+     </figure>
+  </section>
+  <br><br>
+  <!-- contenedor fancybox -->
+
+  <div class="wow animate__animated animate__slideInLeft barratitulo ancho">
+    <span>VIDEO</span>
+  </div>
+  <!-- barras de titulo -->
+  
+
+
+
+  <section class="ctn_ceo ancho">
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/IyIjYuF_HUo?si=4QLYtpxVuiCcC0El" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <article>
+      <div class="ctn_nombre_ceo">
+        <span>The company of the dream</span>
+      </div>
+      <div class="ctn_texto_ceo">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, dolores atque accusamus deleniti maxime necessitatibus quos sit? Cum beatae corporis, dolor dignissimos commodi velit, aliquid ea, quos delectus amet numquam sunt dolorum tempore nesciunt. Eum architecto delectus aut cupiditate minus, debitis repudiandae repellat necessitatibus, molestiae eos, a rem quaerat.</p>
+      </div><br>
+      <div class="ctn_boton_ceo">
+        <a href="">See More</a>
+      </div>
+    </article>
+  </section>
+  <br>
+
+  <footer>
+    <div class="contenedor_footer">
+    <div class="info_footer ancho">
+      <span>ProMentor.</span>
+      <p>Need First Class Consulting?.</p>
+      <p>Call Us To +52 999 482 1159</p>
+      <p>lorenzogonzalez741@gmail.com</p>
+      <p>ProMentor, Best Consulting Agency</p>
+    </div>
+    <div class="mapa_footer ancho">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14900.019290527858!2d-89.7078988445801!3d20.992443800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f567359f4aebefb%3A0xd33b4fef2ef90774!2sJard%C3%ADn%20de%20Ni%C3%B1os%20Nelly%20Ojeda%20Fern%C3%A1ndez!5e0!3m2!1ses-419!2smx!4v1686142592201!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="iconos_footer">
+      <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+      <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+    </div>
+  </div>
+  </footer>
+
+
+  <script>
+    $("#iconomenu").click(function(){
+      $("#cajamenu").slideToggle();
+    });
+    $(function() {
+      $(".rslides").responsiveSlides();
+    });
+
+
+    $(document).ready(function () {
+    $('.slider1').tinycarousel();
+    });
+
+      /* acordeon */
+      $(".titulo1").click(function () {
+      $(".contenido1").slideToggle();
+      $(".mas1").toggleClass("desaparecer");
+    });
+
+    $(".titulo2").click(function () {
+      $(".contenido2").slideToggle();
+      $(".mas2").toggleClass("desaparecer");
+    });
+
+    $(".titulo3").click(function () {
+      $(".contenido3").slideToggle();
+      $(".mas3").toggleClass("desaparecer");
+    });
+      /* acordeon */
+
+      /* caja modal */
+      const cajaModal = document.querySelector('#caja_modal');
+      const AbrirBotonModal = document.querySelector('#openModal');
+      const CerrarBotonModal = document.querySelector('#btnCerrarModal');
+
+      AbrirBotonModal.addEventListener('click',function(){
+      cajaModal.style.display ='block';
+      });
+
+      CerrarBotonModal.addEventListener('click',function(){
+      cajaModal.style.display ='none';
+      });
+      /* caja modal */
+
+      function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+      new WOW().init();
+  </script>
+  
+</body>
+</html>
